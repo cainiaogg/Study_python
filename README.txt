@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 +---------------+--------------+------+-----+---------+-------+
 | Field         | Type         | Null | Key | Default | Extra |
 +---------------+--------------+------+-----+---------+-------+
@@ -48,3 +49,6 @@ headimgurl, update_datetime,
 last_visit_datetime, subscribe, 
 subscribe_time, unionid, 
 auth, x, y, location_updatetime) FROM stdin;
+=======
+暴力尝试安大校园网 Get_School_Internet
+>>>>>>> ff5a8f394adaa4c97b58d33892561353aef080d0
