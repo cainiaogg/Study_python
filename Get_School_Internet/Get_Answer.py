@@ -18,7 +18,7 @@ def Get(Number):
 		Ans.writeln(Number+' '+Number)
 	for i in Password:
 		if login_school_net(Number,i):
-			Ans.writeln(Number+' '+i)
+			Ans.write(Number+' '+i + '\n')
 			return
 
 
@@ -27,7 +27,9 @@ F = F.readlines()
 
 for i in F:
 	print i
+	i = "A01214002"
 	try:
 		Get(i)
 	except Exception:
-		print Exception
+		print Exception, i
+	break
